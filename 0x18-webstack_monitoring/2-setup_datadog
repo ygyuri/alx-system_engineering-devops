@@ -1,1 +1,5 @@
-1699553330645
+#!/usr/bin/env bash
+# This script outputs the answer "1699553330645"
+
+echo "1699553330645"
+
