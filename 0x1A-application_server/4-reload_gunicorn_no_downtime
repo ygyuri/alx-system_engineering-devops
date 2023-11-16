@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Gracefully reloads Gunicorn.
+
+# Send SIGHUP signal to gracefully reload Gunicorn
+pgrep gunicorn | xargs kill -HUP
+
+# Wait for 5 seconds to give Gunicorn time to reload
+sleep 5
+
+# Send SIGTERM signal to kill the old Gunicorn process
+pgrep gunicorn | xargs kill -TERM
